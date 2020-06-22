@@ -25,7 +25,7 @@ jobs:
           "refreshToken":"${{ secrets.OAUTH_REFRESH_TOKEN }}",
           "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
           "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
-          "expiration": :1592839047059
+          "expiration": 1592839047059
         }
         EOF      
     - name: Install dependencies

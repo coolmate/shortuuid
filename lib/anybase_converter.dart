@@ -6,11 +6,13 @@ class AnyBaseConverter {
 
   String srcAlphabet;
   String dstAlphabet;
-  AnyBaseConverter({this.srcAlphabet = AnyBaseConverter.DEC, this.dstAlphabet = AnyBaseConverter.HEX}) {
+  AnyBaseConverter(
+      {this.srcAlphabet = AnyBaseConverter.DEC,
+      this.dstAlphabet = AnyBaseConverter.HEX}) {
     if (srcAlphabet == null ||
         dstAlphabet == null ||
         (srcAlphabet != null && srcAlphabet.isEmpty) ||
-        (dstAlphabet != null && dstAlphabet.isEmpty) ) {
+        (dstAlphabet != null && dstAlphabet.isEmpty)) {
       throw Exception('Bad alphabet');
     }
     this.srcAlphabet = srcAlphabet;
