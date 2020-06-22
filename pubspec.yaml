@@ -1,0 +1,14 @@
+name: shortuuid
+description: Generate short uuid
+version: 1.0.0
+author: Koumei Deng
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  uuid: ^2.1.0
+
+dev_dependencies:
+  test: any
