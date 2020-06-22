@@ -2,7 +2,8 @@ name: shortuuid
 description: Generate short uuid
 version: 1.0.0
 author: Koumei Deng
-homepage:
+homepage: https://github.com/coolmate/shortuuid
+repository: https://github.com/coolmate/shortuuid
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
