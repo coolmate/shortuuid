@@ -16,7 +16,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Setup credentials
+      run: | 
+        mkdir -p ~/.pub-cache 
+        cat <<EOF > ~/.pub-cache/credentials.json
+        {
+          "accessToken":"${{ secrets.OAUTH_ACCESS_TOKEN }}",
+          "refreshToken":"${{ secrets.OAUTH_REFRESH_TOKEN }}",
+          "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
+          "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
+          "expiration": :1592839047059
+        }
+        EOF      
     - name: Install dependencies
       run: pub get
     - name: Run tests
       run: pub run test
+    - name: Publish package
+      run: pub publish -f      
