@@ -1,6 +1,8 @@
 # shortuuid
 
-Generate short uuid - shorten the original 32 bit Uuid
+Generate short uuid for Dart - shorten the original 32 bit Uuid
+A port version from short-uuid npm package (https://github.com/oculus42/short-uuid)
+Also thanks to uuid 
 
 ## Getting Started
 
