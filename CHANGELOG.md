@@ -1,3 +1,7 @@
+## [2.0.0] - 1 July 2020.
+
+* Update to static functions.
+
 ## [1.0.1] - 22 Jun 2020.
 
 * Update CI build.

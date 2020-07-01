@@ -7,7 +7,7 @@ Also thanks to uuid
 ## Getting Started
 
 ```bash
-$ shortuuid: ^1.0.1
+$ shortuuid: ^2.0.0
 $ pub get
 ```
 
