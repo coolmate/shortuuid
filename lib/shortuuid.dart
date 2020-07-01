@@ -9,7 +9,7 @@ class ShortUuid {
   static const cookieBase90 =
       "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#\$%&'()*+-./:<=>?@[]^_`{|}~";
 
-  String shortv4(
+  static String shortv4(
       {Map<String, dynamic> options,
       String uuidv4,
       String toAlphabet = flickrBase58}) {
@@ -21,7 +21,7 @@ class ShortUuid {
     return fromHex.convert(uuidv4.toLowerCase().replaceAll(RegExp(r'-'), ''));
   }
 
-  String toUuidv4(String shortUuid, {String toAlphabet = flickrBase58}) {
+  static String toUuidv4(String shortUuid, {String toAlphabet = flickrBase58}) {
     var toHex = AnyBaseConverter(
         srcAlphabet: toAlphabet, dstAlphabet: AnyBaseConverter.HEX);
     String strUuidv4 = toHex.convert(shortUuid);

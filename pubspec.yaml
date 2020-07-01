@@ -1,6 +1,6 @@
 name: shortuuid
 description: Generate short uuid (shorter version of 32 bit Guid). It will be useful if you need unque id that is in shorter format.
-version: 1.0.1
+version: 2.0.0
 author: Koumei Deng
 homepage: https://github.com/coolmate/shortuuid
 repository: https://github.com/coolmate/shortuuid
