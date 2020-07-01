@@ -13,7 +13,7 @@ $ pub get
 
 ## Usage:
 ```
-var shortUuid = ShortUuid().shortv4();
+var shortUuid = ShortUuid.shortv4();
 print(shortUuid);
 // should be something like '2ZvH1zF5heKiXauFhhn9YT'
 ```
