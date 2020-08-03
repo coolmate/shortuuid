@@ -1,3 +1,7 @@
+## [2.1.0] - 3 August 2020.
+
+* Add default parameter as null in shortv4() function.
+
 ## [2.0.0] - 1 July 2020.
 
 * Update to static functions.
