@@ -11,7 +11,7 @@ class ShortUuid {
 
   static String shortv4(
       {Map<String, dynamic> options,
-      String uuidv4,
+      String uuidv4 = null,
       String toAlphabet = flickrBase58}) {
     uuidv4 = uuidv4 == null ? Uuid().v4(options: options) : uuidv4;
 
