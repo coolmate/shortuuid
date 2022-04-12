@@ -9,10 +9,7 @@ class AnyBaseConverter {
   AnyBaseConverter(
       {this.srcAlphabet = AnyBaseConverter.DEC,
       this.dstAlphabet = AnyBaseConverter.HEX}) {
-    if (srcAlphabet == null ||
-        dstAlphabet == null ||
-        (srcAlphabet != null && srcAlphabet.isEmpty) ||
-        (dstAlphabet != null && dstAlphabet.isEmpty)) {
+    if ((srcAlphabet.isEmpty) || (dstAlphabet.isEmpty)) {
       throw Exception('Bad alphabet');
     }
     this.srcAlphabet = srcAlphabet;
@@ -68,7 +65,7 @@ class AnyBaseConverter {
         }
       }
       length = newlen;
-      result = dstAlphabet.substring(divide, divide + 1) + result;
+      result = dstAlphabet.substring(divide, divide + 1) + result.toString();
     } while (newlen != 0);
 
     return result;
