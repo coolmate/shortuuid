@@ -6,7 +6,7 @@ homepage: https://github.com/coolmate/shortuuid
 repository: https://github.com/coolmate/shortuuid
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   uuid: ^3.0.1

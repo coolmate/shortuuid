@@ -10,8 +10,8 @@ class ShortUuid {
       "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#\$%&'()*+-./:<=>?@[]^_`{|}~";
 
   static String shortv4(
-      {Map<String, dynamic> options,
-      String uuidv4 = null,
+      {Map<String, dynamic>? options,
+      String? uuidv4,
       String toAlphabet = flickrBase58}) {
     uuidv4 = uuidv4 == null ? Uuid().v4(options: options) : uuidv4;
 
@@ -26,7 +26,7 @@ class ShortUuid {
         srcAlphabet: toAlphabet, dstAlphabet: AnyBaseConverter.HEX);
     String strUuidv4 = toHex.convert(shortUuid);
     var leftPad = '';
-    var m = List<String>();
+    var m = <String>[];
 
     for (var i = 0, len = 32 - strUuidv4.length; i < len; ++i) {
       leftPad += '0';
@@ -38,8 +38,10 @@ class ShortUuid {
     if (matches.isNotEmpty) {
       var match = matches.first;
       for (var i = 1; i <= match.groupCount; i++) {
-        var matchStr = match.group(i);
-        m.add(matchStr);
+        String? matchStr = match.group(i);
+        if (matchStr != null) {
+          m.add(matchStr);
+        }
       }
     }
     return [m[0], m[1], m[2], m[3], m[4]].join('-');
